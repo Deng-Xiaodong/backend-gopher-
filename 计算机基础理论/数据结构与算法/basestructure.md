@@ -483,3 +483,190 @@ func (h *IndexHeap) shiftdown(p int) {
 
 ```
 
+# 5. 最小生成树
+
+<font color=red>prime</font>
+
+- 基于点
+- 新加点，更新与该点相连的切边
+- 数据结构：最小索引堆
+
+
+
+
+
+
+
+```go
+type Edge struct {
+	s, d int
+	w    int
+}
+type Prime struct {
+	v         int
+	graph     [][]Edge
+	indexHeap *heap.IndexHeap
+	visited   []bool
+}
+
+func NewPrime(g [][]Edge) *Prime {
+	return &Prime{
+		v:         len(g),
+		graph:     g,
+		indexHeap: heap.NewIndexHeap(len(g)),
+		visited:   make([]bool, len(g)),
+	}
+}
+
+func (p Prime) MinTree() int {
+
+	minCost := 0
+
+	for _, e := range p.graph[0] {
+		p.indexHeap.Push(e.d, e.w)
+	}
+	p.visited[0] = true
+	for p.indexHeap.Len() > 0 {
+		idx, w := p.indexHeap.Pop()
+		p.visited[idx] = true
+		minCost += w
+		for _, e := range p.graph[idx] {
+			if !p.visited[e.d] {
+				if !p.indexHeap.Contain(e.d) {
+					p.indexHeap.Push(e.d, e.w)
+				} else if e.w < p.indexHeap.GetValue(e.d) {
+					p.indexHeap.Change(e.d, e.w)
+				}
+			}
+		}
+	}
+	return minCost
+}
+```
+
+
+
+<font color=red>krush</font>
+
+- 基于边
+- 新加不成环的最小边
+- 数据结构：最小堆、并查集
+
+
+
+```go
+type Dijkstra struct {
+	v     int
+	graph [][]Edge
+	indexHeap *heap.IndexHeap
+	visited   []bool
+	path      []int
+}
+
+func NewDijkstra(g [][]Edge) *Dijkstra {
+	v := len(g)
+	path := make([]int, v)
+	for i := 0; i < v; i++ {
+		path[i] = -1
+	}
+	return &Dijkstra{
+		v:     v,
+		graph: g,
+		indexHeap: heap.NewIndexHeap(v),
+		visited:   make([]bool, v),
+		path:      path,
+	}
+}
+
+func (d *Dijkstra) MinPath(start int) []int {
+	d.path[start] = start
+	d.visited[start] = true
+
+	for _, e := range d.graph[start] {
+		d.path[e.d] = start
+		d.indexHeap.Push(e.d, e.w)
+	}
+	for d.indexHeap.Len() > 0 {
+		id, cost := d.indexHeap.Pop()
+		d.visited[id] = true
+		//松弛
+		for _, ee := range d.graph[id] {
+			if !d.visited[ee.d] {
+				if !d.indexHeap.Contain(ee.d) {
+					d.indexHeap.Push(ee.d, ee.w+cost)
+					d.path[ee.d] = id
+				} else if ee.w+cost < d.indexHeap.GetValue(ee.d) {
+					d.indexHeap.Change(ee.d, ee.w+cost)
+					d.path[ee.d] = id
+				}
+			}
+		}
+	}
+	return d.path
+}
+```
+
+
+
+# 6. 单源最短路径
+
+<font color=red>dijkstra</font>
+
+- 基于点
+- 新增点，更新以该点为中转点的未访问点的消耗cost以及前继点
+- 数据结构：最小索引堆
+
+
+
+```go
+type Dijkstra struct {
+	v         int
+	graph     [][]Edge
+	indexHeap *heap.IndexHeap
+	visited   []bool
+	path      []int
+}
+
+func NewDijkstra(g [][]Edge) *Dijkstra {
+	v := len(g)
+	path := make([]int, v)
+	for i := 0; i < v; i++ {
+		path[i] = -1
+	}
+	return &Dijkstra{
+		v:         v,
+		graph:     g,
+		indexHeap: heap.NewIndexHeap(v),
+		visited:   make([]bool, v),
+		path:      path,
+	}
+}
+
+func (d *Dijkstra) MinPath(start int) []int {
+	d.path[start] = start
+	d.visited[start] = true
+
+	for _, e := range d.graph[start] {
+		d.path[e.d] = start
+		d.indexHeap.Push(e.d, e.w)
+	}
+	for d.indexHeap.Len() > 0 {
+		id, cost := d.indexHeap.Pop()
+		d.visited[id] = true
+		//松弛
+		for _, ee := range d.graph[id] {
+			if !d.visited[ee.d] {
+				if !d.indexHeap.Contain(ee.d) {
+					d.indexHeap.Push(ee.d, ee.w+cost)
+					d.path[ee.d] = id
+				} else if ee.w+cost < d.indexHeap.GetValue(ee.d) {
+					d.indexHeap.Change(ee.d, ee.w+cost)
+					d.path[ee.d] = id
+				}
+			}
+		}
+	}
+	return d.path
+}
+```
+
