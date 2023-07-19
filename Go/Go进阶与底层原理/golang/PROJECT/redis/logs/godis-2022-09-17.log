@@ -1,0 +1,233 @@
+[INFO][server.go:43] 2022/09/17 14:17:55 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 14:18:07 accept ip: 127.0.0.1:51051
+[INFO][server.go:52] 2022/09/17 14:26:15 shutting down
+[INFO][handler.go:58] 2022/09/17 14:26:15 handler shutting down...
+[INFO][handler.go:77] 2022/09/17 14:26:15 connection closed: 127.0.0.1:51051
+[INFO][server.go:43] 2022/09/17 14:26:27 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 14:26:30 accept ip: 127.0.0.1:51106
+[INFO][server.go:52] 2022/09/17 14:28:26 shutting down
+[INFO][handler.go:61] 2022/09/17 14:28:26 handler shutting down...
+[INFO][handler.go:80] 2022/09/17 14:28:26 connection closed: 127.0.0.1:51106
+[INFO][server.go:43] 2022/09/17 14:29:07 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 14:29:07 accept ip: 127.0.0.1:51126
+[INFO][handler.go:81] 2022/09/17 14:29:29 connection closed: 127.0.0.1:51126
+[INFO][server.go:52] 2022/09/17 14:29:32 shutting down
+[INFO][handler.go:62] 2022/09/17 14:29:32 handler shutting down...
+[INFO][server.go:43] 2022/09/17 14:30:14 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 14:30:18 accept ip: 127.0.0.1:51139
+[INFO][handler.go:81] 2022/09/17 14:31:40 connection closed: 127.0.0.1:51139
+[INFO][server.go:52] 2022/09/17 14:31:48 shutting down
+[INFO][handler.go:62] 2022/09/17 14:31:48 handler shutting down...
+[INFO][server.go:43] 2022/09/17 14:32:10 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 14:32:16 accept ip: 127.0.0.1:51145
+[INFO][server.go:52] 2022/09/17 14:34:04 shutting down
+[INFO][handler.go:62] 2022/09/17 14:34:04 handler shutting down...
+[INFO][handler.go:81] 2022/09/17 14:34:04 connection closed: 127.0.0.1:51145
+[INFO][server.go:43] 2022/09/17 14:34:19 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 14:34:19 accept ip: 127.0.0.1:51155
+[INFO][server.go:52] 2022/09/17 14:34:40 shutting down
+[INFO][handler.go:62] 2022/09/17 14:34:40 handler shutting down...
+[INFO][handler.go:81] 2022/09/17 14:34:40 connection closed: 127.0.0.1:51155
+[INFO][server.go:43] 2022/09/17 14:34:55 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 14:34:55 accept ip: 127.0.0.1:51167
+[INFO][server.go:52] 2022/09/17 14:38:28 shutting down
+[INFO][handler.go:62] 2022/09/17 14:38:28 handler shutting down...
+[INFO][handler.go:81] 2022/09/17 14:38:28 connection closed: 127.0.0.1:51167
+[INFO][server.go:43] 2022/09/17 14:38:39 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 14:38:39 accept ip: 127.0.0.1:51175
+[INFO][server.go:52] 2022/09/17 14:42:07 shutting down
+[INFO][handler.go:62] 2022/09/17 14:42:07 handler shutting down...
+[INFO][handler.go:81] 2022/09/17 14:42:07 connection closed: 127.0.0.1:51175
+[INFO][server.go:43] 2022/09/17 14:42:55 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 14:43:06 accept ip: 127.0.0.1:51207
+[INFO][server.go:52] 2022/09/17 14:47:45 shutting down
+[INFO][handler.go:62] 2022/09/17 14:47:45 handler shutting down...
+[INFO][handler.go:81] 2022/09/17 14:47:45 connection closed: 127.0.0.1:51207
+[INFO][server.go:43] 2022/09/17 14:48:41 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 14:48:45 accept ip: 127.0.0.1:51232
+[INFO][handler.go:89] 2022/09/17 14:51:12 connection closed: 127.0.0.1:51232
+[INFO][server.go:52] 2022/09/17 14:51:20 shutting down
+[INFO][handler.go:62] 2022/09/17 14:51:20 handler shutting down...
+[INFO][server.go:43] 2022/09/17 14:51:53 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 14:51:59 accept ip: 127.0.0.1:51244
+[INFO][server.go:52] 2022/09/17 14:59:18 shutting down
+[INFO][handler.go:62] 2022/09/17 14:59:18 handler shutting down...
+[INFO][handler.go:81] 2022/09/17 14:59:18 connection closed: 127.0.0.1:51244
+[INFO][server.go:43] 2022/09/17 15:00:05 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 15:00:05 accept ip: 127.0.0.1:51315
+[INFO][server.go:52] 2022/09/17 15:02:36 shutting down
+[INFO][handler.go:62] 2022/09/17 15:02:36 handler shutting down...
+[INFO][handler.go:81] 2022/09/17 15:02:36 connection closed: 127.0.0.1:51315
+[INFO][server.go:43] 2022/09/17 15:02:55 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 15:02:56 accept ip: 127.0.0.1:51336
+[INFO][server.go:52] 2022/09/17 15:06:57 shutting down
+[INFO][handler.go:62] 2022/09/17 15:06:57 handler shutting down...
+[INFO][handler.go:81] 2022/09/17 15:06:57 connection closed: 127.0.0.1:51336
+[INFO][server.go:43] 2022/09/17 15:07:01 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 15:07:02 accept ip: 127.0.0.1:51359
+[INFO][server.go:52] 2022/09/17 15:31:09 shutting down
+[INFO][handler.go:64] 2022/09/17 15:31:09 handler shutting down...
+[INFO][handler.go:83] 2022/09/17 15:31:09 connection closed: 127.0.0.1:51359
+[INFO][server.go:43] 2022/09/17 15:47:28 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 15:48:05 accept ip: 127.0.0.1:51658
+[INFO][handler.go:91] 2022/09/17 15:50:54 connection closed: 127.0.0.1:51658
+[INFO][server.go:73] 2022/09/17 15:50:57 accept ip: 127.0.0.1:51673
+[INFO][handler.go:91] 2022/09/17 15:52:20 connection closed: 127.0.0.1:51673
+[INFO][server.go:73] 2022/09/17 15:52:22 accept ip: 127.0.0.1:51677
+[INFO][handler.go:91] 2022/09/17 15:54:26 connection closed: 127.0.0.1:51677
+[INFO][server.go:73] 2022/09/17 15:54:28 accept ip: 127.0.0.1:51683
+[INFO][handler.go:91] 2022/09/17 15:54:46 connection closed: 127.0.0.1:51683
+[INFO][server.go:73] 2022/09/17 15:54:47 accept ip: 127.0.0.1:51686
+[INFO][handler.go:91] 2022/09/17 15:55:32 connection closed: 127.0.0.1:51686
+[INFO][server.go:73] 2022/09/17 15:55:34 accept ip: 127.0.0.1:51687
+[INFO][handler.go:91] 2022/09/17 15:55:55 connection closed: 127.0.0.1:51687
+[INFO][server.go:73] 2022/09/17 15:55:57 accept ip: 127.0.0.1:51689
+[INFO][handler.go:91] 2022/09/17 15:57:06 connection closed: 127.0.0.1:51689
+[INFO][server.go:73] 2022/09/17 15:57:07 accept ip: 127.0.0.1:51691
+[INFO][handler.go:91] 2022/09/17 16:01:50 connection closed: 127.0.0.1:51691
+[INFO][server.go:73] 2022/09/17 16:01:57 accept ip: 127.0.0.1:51831
+[INFO][handler.go:91] 2022/09/17 16:02:37 connection closed: 127.0.0.1:51831
+[INFO][server.go:52] 2022/09/17 16:04:00 shutting down
+[INFO][handler.go:64] 2022/09/17 16:04:00 handler shutting down...
+[INFO][server.go:43] 2022/09/17 16:05:18 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 16:07:08 accept ip: 127.0.0.1:51878
+[INFO][server.go:43] 2022/09/17 16:10:39 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 16:10:56 accept ip: 127.0.0.1:51908
+[INFO][handler.go:91] 2022/09/17 16:11:40 connection closed: 127.0.0.1:51908
+[INFO][server.go:43] 2022/09/17 16:12:13 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 16:13:19 accept ip: 127.0.0.1:51916
+[INFO][handler.go:91] 2022/09/17 16:13:24 connection closed: 127.0.0.1:51916
+[INFO][server.go:73] 2022/09/17 16:13:35 accept ip: 127.0.0.1:51917
+[INFO][server.go:43] 2022/09/17 16:15:14 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 16:16:01 accept ip: 127.0.0.1:51948
+[INFO][handler.go:83] 2022/09/17 16:18:25 connection closed: 127.0.0.1:51948
+[INFO][server.go:73] 2022/09/17 16:18:31 accept ip: 127.0.0.1:51956
+[INFO][handler.go:91] 2022/09/17 16:18:31 connection closed: 127.0.0.1:51956
+[INFO][server.go:43] 2022/09/17 16:18:47 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 16:18:56 accept ip: 127.0.0.1:51966
+[INFO][handler.go:91] 2022/09/17 16:18:56 connection closed: 127.0.0.1:51966
+[INFO][server.go:73] 2022/09/17 16:19:52 accept ip: 127.0.0.1:51970
+[INFO][handler.go:91] 2022/09/17 16:19:53 connection closed: 127.0.0.1:51970
+[INFO][server.go:73] 2022/09/17 16:20:11 accept ip: 127.0.0.1:51972
+[INFO][handler.go:91] 2022/09/17 16:20:12 connection closed: 127.0.0.1:51972
+[INFO][server.go:73] 2022/09/17 16:20:25 accept ip: 127.0.0.1:51975
+[INFO][handler.go:91] 2022/09/17 16:20:58 connection closed: 127.0.0.1:51975
+[INFO][server.go:43] 2022/09/17 16:23:48 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 16:24:02 accept ip: 127.0.0.1:51994
+[INFO][handler.go:91] 2022/09/17 16:29:33 connection closed: 127.0.0.1:51994
+[INFO][server.go:73] 2022/09/17 16:30:05 accept ip: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][handler.go:91] 2022/09/17 16:30:05 connection closed: 127.0.0.1:52021
+[INFO][server.go:73] 2022/09/17 16:31:20 accept ip: 127.0.0.1:52026
+[INFO][handler.go:91] 2022/09/17 16:31:20 connection closed: 127.0.0.1:52026
+[INFO][server.go:52] 2022/09/17 17:54:47 shutting down
+[INFO][handler.go:64] 2022/09/17 17:54:47 handler shutting down...
+[WARN][aofhandler.go:54] 2022/09/17 18:46:41 open appendonly.aof: The system cannot find the file specified.
+[INFO][server.go:43] 2022/09/17 18:46:41 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 18:46:54 accept ip: 127.0.0.1:52672
+[INFO][server.go:52] 2022/09/17 18:48:03 shutting down
+[INFO][handler.go:64] 2022/09/17 18:48:03 handler shutting down...
+[INFO][handler.go:83] 2022/09/17 18:48:03 connection closed: 127.0.0.1:52672
+[INFO][server.go:43] 2022/09/17 18:49:25 bind: 0.0.0.0:6379 start listening...
+[INFO][server.go:73] 2022/09/17 18:49:35 accept ip: 127.0.0.1:52697
+[INFO][server.go:52] 2022/09/17 18:59:53 shutting down
+[INFO][handler.go:64] 2022/09/17 18:59:53 handler shutting down...
+[INFO][handler.go:83] 2022/09/17 18:59:53 connection closed: 127.0.0.1:52697
