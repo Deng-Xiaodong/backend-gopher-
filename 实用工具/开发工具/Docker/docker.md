@@ -471,3 +471,17 @@ docker-compose up service_name ...
 #先启动被依赖性再启动其他
 ```
 
+# 4. 使用踩过的坑
+
+【1】 容器里，pid=1的进程被kill后容器会自动退出。pid=1是容器进入容器允许的第一个进程，有可能是
+
+- docker run 指定的启动进程
+- dockerfile里的 RUN 、ENTRYPOINT等
+- dockercompse 里的 command
+
+【2】启动容器时没有指定任何启动进程，容器启动后会自动退出，这种情况下可以配置 <font color=red>`tty=true` </font>让容器不会自动退出
+
+
+
+# 5. 常见容器的参数配置和使用
+
