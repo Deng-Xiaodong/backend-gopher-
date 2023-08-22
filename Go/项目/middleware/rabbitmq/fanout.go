@@ -1,6 +1,7 @@
 package rabbitmq
 
 import (
+	"fmt"
 	"github.com/streadway/amqp"
 	"log"
 	"time"
@@ -17,14 +18,18 @@ func FanoutPublish() {
 	}
 	//exchange
 	_ = c.ExchangeDeclare("fanout_logs", "fanout", false, false, false, false, nil)
-	//queue 用已有的
+	//queue
+	qa, _ := c.QueueDeclare("a", false, false, false, false, nil)
+	qb, _ := c.QueueDeclare("b", false, false, false, false, nil)
 	//bind
-	_ = c.QueueBind("a", "", "fanout_logs", false, nil)
-	_ = c.QueueBind("c", "", "fanout_logs", false, nil)
-	_ = c.QueueBind("g", "", "fanout_logs", false, nil)
-
+	_ = c.QueueBind(qa.Name, "", "fanout_logs", false, nil)
+	_ = c.QueueBind(qb.Name, "", "fanout_logs", false, nil)
 	//publish
-	_ = c.Publish("fanout_logs", "", false, false, amqp.Publishing{ContentType: "text/plain", Body: []byte("exchange fanout_logs with key nil")})
+	for i := 0; i < 5; i++ {
+		_ = c.Publish("fanout_logs", "", false, false,
+			amqp.Publishing{ContentType: "text/plain", Body: []byte(fmt.Sprintf("logs_%d", i))})
+	}
+
 }
 
 func FanoutConsumer() {
@@ -38,8 +43,5 @@ func FanoutConsumer() {
 	}
 	go consumer(c, "a")
 	go consumer(c, "b")
-	go consumer(c, "c")
-	go consumer(c, "r")
-	go consumer(c, "g")
 	time.Sleep(5 * time.Second)
 }

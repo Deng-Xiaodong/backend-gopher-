@@ -19,6 +19,7 @@ func DirectPublish() {
 	if err3 != nil {
 		log.Fatalln(err3)
 	}
+
 	//exchange
 	//if err := c.ExchangeDeclare(
 	//	"logs",
@@ -43,14 +44,14 @@ func DirectPublish() {
 	//	log.Fatalln(err)
 	//}
 	//queue
-	//c.QueueDeclare("a", false, false, false, false, nil)
+	c.QueueDeclare("a", false, false, false, false, nil)
 	//c.QueueDeclare("b", false, false, false, false, nil)
 	//c.QueueDeclare("c", false, false, false, false, nil)
 	//c.QueueDeclare("g", false, false, false, false, nil)
 	//c.QueueDelete("d", false, false, false)
 
 	//bind
-	//_ = c.QueueBind("a", "key1", "logs", false, nil)
+	_ = c.QueueBind("a", "key1", "logs", false, nil)
 	//_ = c.QueueBind("b", "key2", "logs", false, nil)
 	//_ = c.QueueBind("c", "key3", "logs", false, nil)
 	//_ = c.QueueBind("d", "key4", "logs", false, nil)
@@ -124,14 +125,12 @@ func DirectConsumer() {
 
 }
 func consumer(c *amqp.Channel, name string) {
-	csm, err := c.Consume(name, "", false, false, false, false, nil)
+	csm, err := c.Consume(name, "", true, false, false, false, nil)
 	if err != nil {
 		log.Fatalln(err)
 	}
-	forever := make(chan struct{})
 	for msg := range csm {
 		log.Printf("队列%s 接收到信息：%s\n", name, msg.Body)
 		msg.Ack(false)
 	}
-	<-forever
 }

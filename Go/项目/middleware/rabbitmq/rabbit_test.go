@@ -3,6 +3,7 @@ package rabbitmq
 import (
 	"sync"
 	"testing"
+	"time"
 )
 
 func TestDirect(t *testing.T) {
@@ -37,4 +38,10 @@ func TestTopic(t *testing.T) {
 		TopicConsumer()
 	}()
 	wg.Wait()
+}
+
+func TestRPC(t *testing.T) {
+	go startServer()
+	go startClient()
+	time.Sleep(10 * time.Second)
 }

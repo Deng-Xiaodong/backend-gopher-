@@ -481,7 +481,132 @@ docker-compose up service_name ...
 
 【2】启动容器时没有指定任何启动进程，容器启动后会自动退出，这种情况下可以配置 <font color=red>`tty=true` </font>让容器不会自动退出
 
-
+【3】overlay2存储挤爆
 
 # 5. 常见容器的参数配置和使用
 
+## MySQL
+
+### 拉取镜像
+
+```shell
+docker pull mysql
+```
+
+
+
+### 简单启动
+
+```shell
+docker run --name some-mysql -e MYSQL_ROOT_PASSWORD='secret' -p 3306:3306 -d mysql
+```
+
+- `MYSQL_ROOT_PASSWORD`：设置root密码
+
+### 挂载数据卷和配置文件启动
+
+**查找配置文件位置**
+
+不同版本部署的 MySQL 内，可能文件路径不一致，如 `/etc/mysql/my.cnf`、 `/etc/mysql/conf.d` 或者 `/etc/mysql/mysql.conf.d`等。运行以下命令查找`mysql`配置文件`my.cnf`的位置：
+
+```shell
+docker run --rm mysql mysql --help | grep my.cnf
+//结果
+//etc/my.cnf /etc/mysql/my.cnf ~/.my.cnf
+```
+
+意思是按照`/etc/my.cnf`、`/etc/mysql/my.cnf`、`~/.my.cnf`路径按优先排序。
+
+**查找数据文件位置**
+
+```shell
+docker inspect mysql
+//结果
+"Volumes": {
+                "/var/lib/mysql": {}
+            },
+```
+
+可以得到镜像中`mysql`配置文件路径为`/etc/mysql/my.cnf`
+
+**创建本地路径**
+
+```shell
+mkdir -p ~/docker/mysql/conf & mkdir -p ~/docker/mysql/datadir
+```
+
+将容器mysql默认配置文件`/etc/my.cnf`拷贝到本地路径
+
+```shell
+CID='docker run -d mysql'\
+&& docker cp $CID/etc/my.cnf ~/docker/mysql/conf \
+&& docker stop $CID \
+&& docker rm $CID
+```
+
+**挂载启动Mysql**
+
+```shell
+docker run --name some-mysql \
+-p 3306:3306 \
+-e MYSQL_ROOT_PASSWORD='secret' \
+-v ~/docker/mysql/conf/my.cnf:/etc/my.cnf \
+-v ~/docker/mysql/datadir:/var/lib/mysql \
+-d mysql
+```
+
+### 启动mysql客户端
+
+**进入自己的客户端**
+
+```shell
+docker exec -it some-mysql mysql -uroot -p
+```
+
+**新起mysql容器连接some-mysql容器**
+
+```shell
+
+```
+
+### 环境变量说明
+
+在启动`mysql`镜像时，可以通过在`docker run`命令行中传递一个或多个环境变量来调整 MySQL 实例的配置。请注意，如果您使用已经包含数据库的数据目录启动容器，则以下任何变量都不会产生任何影响：在容器启动时，任何预先存在的数据库将始终保持不变。
+
+`MYSQL_ROOT_PASSWORD`
+
+此变量是必需的，它指定将为 MySQL`root`超级用户帐户设置的密码。在上面的例子中，它被设置为`root`。
+
+`MYSQL_DATABASE`
+
+此变量是可选的，允许您指定要在映像启动时创建的数据库的名称。如果提供了用户/密码（见下文），则该用户将被授予对该数据库的超级用户访问权限（[对应于`GRANT ALL`](https://link.juejin.cn?target=http%3A%2F%2Fdev.mysql.com%2Fdoc%2Fen%2Fadding-users.html)）。
+
+`MYSQL_USER`, `MYSQL_PASSWORD`
+
+这些变量是可选的，结合使用来创建新用户和设置该用户的密码。该用户将被授予对`MYSQL_DATABASE`变量指定的数据库的超级用户权限（见上文）。
+
+
+
+### 备份和恢复
+
+**创建数据库备份**
+
+生成指定或所有数据库的`sql`文件
+
+启动`mysql`镜像使用`mysqldump`命令备份：
+
+```shell
+docker exec some-mysql sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_ROOT_PASSWORD"' > ~/docker/mysql/dump/all-databases.sql
+```
+
+**从备份恢复数据**
+
+~~~shell
+docker exec -i some-mysql sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' < ~/docker/mysql/dump/all-databases.sql
+~~~
+
+`<`：右边内容重定向到左边文件或命令行
+
+`>`：左边内容覆盖到右边文件或命令行
+
+`>>`：左边内容追加到右边文件或命令行
